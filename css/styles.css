@@ -820,7 +820,6 @@ body {
   margin-bottom: 12px;
 }
 
-
 .modal-label {
   display: flex;
   flex-direction: column;
@@ -913,6 +912,7 @@ body {
 .modal-checkbox:checked + .checkbox-icon {
   background-image: url(../images/icon-check.svg);
   background-size: contain;
+  background-position: center;
   background-origin: border-box;
   border-color: transparent;
 }
