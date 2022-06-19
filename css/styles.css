@@ -40,7 +40,7 @@ img {
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
-  line-height: 1.19;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   color: var(--title-color);
 }
@@ -278,6 +278,7 @@ body {
 
 .benefits-item-title {
   font-weight: 700;
+  font-size: 14px;
   text-transform: uppercase;
 
   margin-bottom: 10px;
@@ -479,10 +480,6 @@ body {
   align-items: baseline;
 }
 
-.address {
-  margin-right: 70px;
-}
-
 .footer-link {
   display: inline-block;
   font-family: 'Raleway', sans-serif;
@@ -493,6 +490,7 @@ body {
 
   margin-bottom: 20px;
 }
+
 .footer-text {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -504,18 +502,21 @@ body {
 .footer-address-item:not(:last-child) {
   margin-bottom: 9px;
 }
+
 .footer-address-link {
   line-height: 1.71;
   color: var(--main-title-color);
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .footer-mail {
   line-height: 1.71;
   color: var(--footer-link-color);
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .footer-tel {
   line-height: 1.71;
   color: var(--footer-link-color);
@@ -533,7 +534,7 @@ body {
 }
 
 .social {
-  margin-right: 93px;
+  margin-left: 70px;
 }
 
 .social-text {
@@ -543,6 +544,7 @@ body {
 
   margin-bottom: 20px;
 }
+
 .social-list {
   display: flex;
 }
@@ -580,17 +582,24 @@ body {
   background-color: var(--accent-color);
 }
 
+.subscription-thumb {
+  margin-left: auto;
+}
+
 .subscription-form {
   display: flex;
   align-items: flex-end;
 }
 
-.subscription-label {
-  display: flex;
-  flex-direction: column;
+.subscription-text {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--main-title-color);
+}
+
+.subscription-label {
+  display: flex;
+  flex-direction: column;
 }
 
 .subscription-input {
@@ -611,6 +620,7 @@ body {
   background-color: transparent;
   outline: none;
 }
+
 .subscription-btn {
   display: flex;
   align-items: center;
@@ -763,7 +773,7 @@ body {
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1.1);
 }
 
 .modal {
@@ -778,7 +788,7 @@ body {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transform: translate(-50%, -50%) scale(1.1);
+  transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -849,20 +859,31 @@ body {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-input:focus {
-  border-color: var(--accent-color);
+.modal-input:hover,
+.modal-comments:hover {
+  border-color: rgba(33, 33, 33, 0.5);
 }
 
 .modal-form-icon {
   position: absolute;
   left: 12px;
   top: 50%;
-  transform: translateY(-50%);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(0%, -50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:hover + .modal-form-icon {
+  transform: translate(-50%, -50%);
+  fill: rgba(33, 33, 33, 0.5);
 }
 
 .modal-input:focus + .modal-form-icon {
   fill: var(--accent-color);
+  transform: translate(0%, -50%);
+}
+
+.modal-input:focus {
+  border-color: var(--accent-color);
 }
 
 .modal-comments {
@@ -940,5 +961,5 @@ body {
 
   margin-left: auto;
   margin-right: auto;
-  padding: 10px 32px;
+  padding: 10px 55px;
 }
